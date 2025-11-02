@@ -1,0 +1,749 @@
+/* ----- Global ----- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1512px;
+    color: #221E20;
+    font-family: 'Open Sans';
+}
+
+/* ----- Global ----- */
+
+/* ----- Hero Section ----- */
+#warranty {
+    width: 100%;
+    height: 4.63vh;
+    background: #F6F4EB;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+#warranty p {
+    margin: 0;
+    font-size: 0.938rem;
+}
+
+#navigation {
+    width: 100%;
+    height: 9.259vh;
+    background: #221E20;
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    align-content: center;
+}
+
+#logo {
+    margin-left: 4.96vw;
+    margin-right: auto;
+}
+
+#hamburger {
+    display: flex;
+    width: 55.69vw;
+    margin-right: 1vw;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-right: auto;
+}
+
+nav a {
+    color: white;
+    font-size: 0.938rem;
+    text-decoration: none;
+    padding-right: 1.146vw;
+}
+
+#nav-icon {
+    width: 8.3vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#nav-icon i {
+    padding-left: 1.455vw;
+}
+
+#hero-sec {
+    width: 100%;
+    height: 79.074vh;
+    color: white;
+    background-image: url("img/Untitled\ design\ \(4\)\ 1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.hero-text {
+    margin-left: 6.481vw;
+}
+
+#h-id-1 {
+    margin-top: 16.444vh;
+}
+
+#h-text-1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 0.926vh;
+}
+
+#star {
+    color: #F1AA3F;
+    font-size: 1.263rem;
+    font-weight: 400;
+    margin-left: 1.984vw;
+}
+
+#star-text {
+    font-size: 1.063rem;
+    font-weight: 400;
+}
+
+.hero-text header {
+    font-size: 3rem;
+    font-weight: 800;
+    width: 38.624vw;
+    padding-bottom: 0.833vh;
+}
+
+#h-text-2 {
+    font-size: 1.063rem;
+    width: 26.085vw;
+}
+
+#h-sec {
+    display: flex;
+    margin-top: 3.056vh;
+}
+
+.hero-text p {
+    margin: 0px;
+}
+
+#h-sec button {
+    width: 9.127vw;
+    height: 4.722vh;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 2px;
+    margin-right: 0.992vw;
+    font-size: 1.063rem;
+    font-weight: 700;
+}
+
+#h-sec p {
+    font-size: 1rem;
+    margin: 0;
+    padding-top: 1vh;
+}
+
+#h-text-3 {
+    font-size: 1.063rem;
+    padding-top: 0.926vh;
+    padding-left: 1.587vw;
+    margin-top: 0px;
+}
+
+@media screen and (max-width: 500px) {
+    #warranty {
+        height: 3.63vh;
+    }
+
+    #warranty p {
+        font-size: 0.65rem;
+    }
+
+    #navigation {
+        height: 6.259vh;
+    }
+
+    #logo {
+        padding-top: 1vh;
+    }
+
+    #hamburger {
+        display: none;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 63.69vw;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+    }
+
+    nav a {
+        color: white;
+        font-size: 0.938rem;
+        text-decoration: none;
+        padding-right: 1.455vw;
+    }
+
+    #nav-icon {
+        display: flex;
+    }
+
+    nav i {
+        color: white;
+        font-size: 1.2rem;
+        padding-left: 1.455vw;
+    }
+
+    #hero-sec {
+        height: 42.074vh;
+    }
+
+    #h-id-1 {
+        margin-top: 7.444vh;
+    }
+
+    #h-text-1 {
+        font-size: 1rem;
+        padding-bottom: 0.26vh;
+    }
+
+    #star {
+        font-size: 1rem;
+        margin-left: 0.984vw;
+    }
+
+    #star-text {
+        font-size: 0.9rem;
+    }
+
+    .hero-text header {
+        font-size: 1.7rem;
+        width: 78.624vw;
+        padding-bottom: 0.33vh;
+    }
+
+    #h-text-2 {
+        font-size: 0.8rem;
+        width: 60.085vw;
+    }
+
+    #h-sec {
+        margin-top: 1.056vh;
+    }
+
+    #h-sec button {
+        width: 23.127vw;
+        height: 3.722vh;
+        font-size: 1rem;
+    }
+
+    #h-sec p {
+        font-size: 0.9rem;
+        padding-top: 0.7vh;
+    }
+
+    #h-text-3 {
+        font-size: 0.9rem;
+        padding-top: 0.5vh;
+    }
+}
+
+/* ----- Hero Section ----- */
+
+/* ----- Vertical Slider 1 ----- */
+#v-slider1 {
+    width: 100%;
+    height: 36.667vh;
+    background-color: #F6F4EB;
+    display: flex;
+    overflow-x: clip;
+}
+
+.sliders-1 {
+    width: 55.781vw;
+    height: 22.963vh;
+    background-color: #F6F4EB;
+    border: 1px solid #ACACAC;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin: 4.63vh 0 0 2.604vw;
+}
+
+.slider-1 {
+    width: 54.531vw;
+    height: 20.37vh;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.slider-1 article {
+    font-size: 1.7rem;
+    font-style: italic;
+    width: 30.677vw;
+    padding-top: 3.5vh;
+    margin-left: 3.333vw;
+}
+
+.slider-1 img {
+    width: 19.479vw;
+    height: 19.444vh;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 500px) {
+    #v-slider1 {
+        width: 100%;
+        height: 26.667vh;
+    }
+
+    .sliders-1 {
+        width: 82.781vw;
+        height: 14.963vh;
+        background-color: #F6F4EB;
+        margin: 2.63vh 0 0 6.604vw;
+    }
+
+    .slider-1 {
+        width: 79.531vw;
+        height: 13.37vh;
+    }
+
+    .slider-1 article {
+        font-size: 0.8rem;
+        font-style: italic;
+        width: 44.677vw;
+        padding-top: 5.5vh;
+        margin-left: 0.333vw;
+    }
+
+    .slider-1 img {
+        width: 31.479vw;
+        object-fit: contain;
+    }
+}
+
+/* ----- Vertical Slider 1 ----- */
+
+/* ----- Info Section 1 ----- */
+#info {
+    width: 100%;
+    height: 49.815vh;
+    color: #fff;
+    background: #221E20;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+#info-1 {
+    width: 66.667vw;
+    height: 37.963vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-left: 3.594vw;
+}
+
+#info-1 header {
+    width: 42vw;
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 2.315vh;
+}
+
+#gray {
+    color: #7D7D7D;
+}
+
+#info-1 p {
+    width: 36.458vw;
+    font-size: 1.063rem;
+    margin-bottom: 3.333vh;
+}
+
+#info-2 {
+    width: 66.823vw;
+    height: 6.204vh;
+    display: flex;
+}
+
+#info-2 div {
+    width: 23.792vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-right: 1.3vw;
+}
+
+#info-2 img {
+    width: 3.49vw;
+    height: 6.204vh;
+}
+
+#info-t1 {
+    width: 15.773vw;
+    font-size: 1.063rem;
+    margin-left: 1.042vw;
+    padding-top: 0.6vh;
+}
+
+#info-t2 {
+    width: 13.646vw;
+    font-size: 1.063rem;
+    margin-left: 1.042vw;
+    padding-top: 0.6vh;
+}
+
+#info-t3 {
+    width: 13.646vw;
+    font-size: 1.063rem;
+    margin-left: 1.042vw;
+    padding-top: 0.6vh;
+}
+
+#info-div {
+    margin-left: -3vw;
+}
+
+@media screen and (max-width: 500px) {
+    #info {
+        width: 100%;
+        height: 45.815vh;
+    }
+
+    #info-1 {
+        width: 88.667vw;
+        height: 37.963vh;
+        margin-left: 3.594vw;
+        margin-top: 3vh;
+    }
+
+    #info-1 header {
+        width: 75vw;
+        font-size: 1.25rem;
+        font-weight: 800;
+        margin-bottom: 0.1vh;
+    }
+
+    #info-1 p {
+        width: 90vw;
+        font-size: 1rem;
+        margin-bottom: 1.333vh;
+    }
+
+    #info-2 {
+        width: 90.823vw;
+        height: 23.204vh;
+    }
+
+    #info-2 div {
+        width: 27.792vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #info-2 img {
+        width: 7.49vw;
+        height: 3.204vh;
+    }
+
+    #info-t1 {
+        width: 25.773vw;
+        font-size: 0.9rem;
+        margin-left: 1.042vw;
+        padding-top: 0.6vh;
+    }
+
+    #info-t2 {
+        width: 20.646vw;
+        font-size: 0.9rem;
+        margin-left: 1.042vw;
+        padding-top: 0.6vh;
+    }
+
+    #info-t3 {
+        width: 14.646vw;
+        font-size: 0.9rem;
+        margin-left: 1.042vw;
+        padding-top: 0.6vh;
+    }
+}
+
+/* ----- Info Section 1 ----- */
+
+/* ----- Horizontal Slider ----- */
+
+#h-sliders {
+    width: 100%;
+    height: 90.926vh;
+}
+
+.h-slider {
+    height: 100%;
+    display: flex;
+}
+
+.fig-img {
+    width: 33.792vw;
+    height: 75.074vh;
+    object-fit: contain;
+    margin: 4.796vh 6.563vw 0 4.125vw;
+}
+
+.h-slider article {
+    margin: auto 0;
+    width: 45vw;
+}
+
+.h-text1 {
+    font-size: 1.25rem;
+    color: #13355B;
+    margin-bottom: 1.019vh;
+}
+
+.h-text2 {
+    width: 24.479vw;
+    font-size: 2.25rem;
+    font-weight: 900;
+}
+
+.h-text3 {
+    width: 24.479vw;
+    font-size: 1.063rem;
+}
+
+@media screen and (max-width: 500px) {
+    #h-sliders {
+        width: 100%;
+        height: 42.926vh;
+    }
+
+    .h-slider {
+        height: 100%;
+    }
+
+    .fig-img {
+        width: 50.792vw;
+        height: 36.074vh;
+        object-fit: contain;
+        margin: 2.796vh 0.563vw 0 -1.875vw;
+    }
+
+    .h-slider article {
+        margin-top: 2vh;
+        width: 33vw;
+    }
+
+    .h-text1 {
+        font-size: 0.9rem;
+        margin-bottom: 0.019vh;
+    }
+
+    .h-text2 {
+        width: 38.479vw;
+        font-size: 1.25rem;
+    }
+
+    .h-text3 {
+        width: 34.479vw;
+        font-size: 0.9rem;
+    }
+}
+
+/* ----- Horizontal Slider ----- */
+
+/* ----- Vertical Slider 2 ----- */
+#v-sliders-2 {
+    width: 100%;
+    height: 73.519vh;
+    color: white;
+    background-color: #221E20;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slider-2 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.slider-2 header {
+    font-size: 2.25rem;
+    font-weight: 900;
+    margin-bottom: 3.241vh;
+}
+
+.v-img {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+
+.card-img {
+    width: 22.24vw;
+    height: 39.537vh;
+}
+
+.v-img figcaption {
+    width: 22.24vw;
+    font-size: 1.063rem;
+    margin-top: 3.796vh;
+}
+
+@media screen and (max-width: 500px) {
+    #v-sliders-2 {
+        height: 55vh;
+    }
+
+    .slider-2 {
+        margin-bottom: 2vh;
+    }
+
+    .slider-2 header {
+        font-size: 1.25rem;
+        width: 72vw;
+        text-align: center;
+        margin-bottom: 1vh;
+    }
+
+    .card-img {
+        width: 52.24vw;
+        height: 26.537vh;
+    }
+
+    .v-img figcaption {
+        width: 53.24vw;
+        font-size: 0.9rem;
+        margin-top: 0.796vh;
+    }
+}
+
+/* ----- Vertical Slider 2 ----- */
+
+/* ----- Footer ----- */
+footer {
+    width: 100%;
+    height: 35.296vh;
+    color: white;
+    background: #000000;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+#f-text1 {
+    margin-right: 4.479vw;
+}
+
+#f-text1 header {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#f-text1 p {
+    width: 14.583vw;
+    font-size: 0.938rem;
+    color: #ffffffdb;
+}
+
+#f-text1 span {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin-left: 13vw;
+    color: #ffffffdb;
+}
+
+hr {
+    color: #ffffffd4;
+}
+
+.f-text2 {
+    margin-left: 2.604vw;
+    line-height: 2rem;
+}
+
+.f-text2 header {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.f-text2 li {
+    font-size: 0.938rem;
+    list-style: none;
+    color: #ffffffdb;
+}
+
+@media screen and (max-width: 500px) {
+    footer {
+        width: 100%;
+        height: 37.296vh;
+    }
+
+    #f-text1 {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #f-text1 header {
+        font-size: 1rem;
+        margin-left: 12vw;
+    }
+
+    #f-text1 p {
+        width: 67.583vw;
+        font-size: 0.8rem;
+        margin-left: 12vw;
+        margin-bottom: 0;
+    }
+
+    #f-text1 span {
+        font-size: 1.3rem;
+        margin-left: 74%;
+    }
+
+    hr {
+        width: 90%;
+        color: #ffffffd4;
+    }
+
+    .f-text2 {
+        margin-left: 4vw;
+        margin-bottom: 3vh;
+        line-height: 1.5rem;
+    }
+
+    .f-text2 header {
+        font-size: 0.9rem;
+    }
+
+    .f-text2 li {
+        font-size: 0.6rem;
+    }
+}
+
+/* ----- Footer ----- */
