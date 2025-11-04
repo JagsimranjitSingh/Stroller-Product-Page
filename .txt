@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center Mode Slider</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .slider-container {
+            width: 100%;
+            max-width: 1200px;
+            position: relative;
+            padding-bottom: 60px;
+        }
+
+        .slider-wrapper {
+            overflow: hidden;
+            padding: 60px 0 20px;
+        }
+
+        .slide-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .slider-track {
+            display: flex;
+            gap: 20px;
+            transition: transform 0.5s ease;
+            transform: translateX(calc(50% - 135px));
+        }
+
+        .slide {
+            min-width: 250px;
+            height: 300px;
+            background: white;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s ease;
+            transform: scale(0.8);
+            opacity: 0.5;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slide-caption {
+            max-width: 250px;
+            color: white;
+            padding: 0 10px;
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.5s ease;
+            height: 0;
+            overflow: hidden;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Slide 1 active (default) */
+        #slide1:checked ~ .slider-wrapper .slider-track {
+            transform: translateX(calc(50% - 135px));
+        }
+
+        #slide1:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(1) {
+            transform: scale(1.2);
+        }
+
+        #slide1:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(1) .slide {
+            opacity: 1;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        #slide1:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(1) .slide-caption {
+            opacity: 1;
+            transform: translateY(0);
+            height: auto;
+        }
+
+        /* Slide 2 active */
+        #slide2:checked ~ .slider-wrapper .slider-track {
+            transform: translateX(calc(50% - 405px));
+        }
+
+        #slide2:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(2) {
+            transform: scale(1.2);
+        }
+
+        #slide2:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(2) .slide {
+            opacity: 1;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        #slide2:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(2) .slide-caption {
+            opacity: 1;
+            transform: translateY(0);
+            height: auto;
+        }
+
+        /* Slide 3 active */
+        #slide3:checked ~ .slider-wrapper .slider-track {
+            transform: translateX(calc(50% - 675px));
+        }
+
+        #slide3:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(3) {
+            transform: scale(1.2);
+        }
+
+        #slide3:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(3) .slide {
+            opacity: 1;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        #slide3:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(3) .slide-caption {
+            opacity: 1;
+            transform: translateY(0);
+            height: auto;
+        }
+
+        /* Slide 4 active */
+        #slide4:checked ~ .slider-wrapper .slider-track {
+            transform: translateX(calc(50% - 945px));
+        }
+
+        #slide4:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(4) {
+            transform: scale(1.2);
+        }
+
+        #slide4:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(4) .slide {
+            opacity: 1;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        #slide4:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(4) .slide-caption {
+            opacity: 1;
+            transform: translateY(0);
+            height: auto;
+        }
+
+        /* Slide 5 active */
+        #slide5:checked ~ .slider-wrapper .slider-track {
+            transform: translateX(calc(50% - 1215px));
+        }
+
+        #slide5:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(5) {
+            transform: scale(1.2);
+        }
+
+        #slide5:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(5) .slide {
+            opacity: 1;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        #slide5:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(5) .slide-caption {
+            opacity: 1;
+            transform: translateY(0);
+            height: auto;
+        }
+
+        /* Slide 6 active */
+        #slide6:checked ~ .slider-wrapper .slider-track {
+            transform: translateX(calc(50% - 1485px));
+        }
+
+        #slide6:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(6) {
+            transform: scale(1.2);
+        }
+
+        #slide6:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(6) .slide {
+            opacity: 1;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        #slide6:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(6) .slide-caption {
+            opacity: 1;
+            transform: translateY(0);
+            height: auto;
+        }
+
+        /* Slide 7 active */
+        #slide7:checked ~ .slider-wrapper .slider-track {
+            transform: translateX(calc(50% - 1755px));
+        }
+
+        #slide7:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(7) {
+            transform: scale(1.2);
+        }
+
+        #slide7:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(7) .slide {
+            opacity: 1;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        #slide7:checked ~ .slider-wrapper .slider-track .slide-container:nth-child(7) .slide-caption {
+            opacity: 1;
+            transform: translateY(0);
+            height: auto;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 400px;
+            pointer-events: none;
+        }
+
+        .nav-btn {
+            background: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            color: #667eea;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: auto;
+        }
+
+        .nav-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .nav-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Hide all navigation buttons by default */
+        .prev-btn, .next-btn {
+            display: none;
+        }
+
+        /* Show previous buttons based on active slide */
+        #slide2:checked ~ .navigation .prev-1,
+        #slide3:checked ~ .navigation .prev-2,
+        #slide4:checked ~ .navigation .prev-3,
+        #slide5:checked ~ .navigation .prev-4,
+        #slide6:checked ~ .navigation .prev-5,
+        #slide7:checked ~ .navigation .prev-6 {
+            display: flex;
+        }
+
+        /* Show next buttons based on active slide */
+        #slide1:checked ~ .navigation .next-2,
+        #slide2:checked ~ .navigation .next-3,
+        #slide3:checked ~ .navigation .next-4,
+        #slide4:checked ~ .navigation .next-5,
+        #slide5:checked ~ .navigation .next-6,
+        #slide6:checked ~ .navigation .next-7 {
+            display: flex;
+        }
+
+        /* Show both buttons for slide 1 */
+        #slide1:checked ~ .navigation .prev-7 {
+            display: flex;
+        }
+
+        /* Show both buttons for slide 7 */
+        #slide7:checked ~ .navigation .next-1 {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <input type="radio" name="slider" id="slide5">
+        <input type="radio" name="slider" id="slide6">
+        <input type="radio" name="slider" id="slide7">
+
+        <div class="slider-wrapper">
+            <div class="slider-track">
+                <div class="slide-container">
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=400&fit=crop" alt="Kids on stroller">
+                    </div>
+                    <div class="slide-caption">Beautiful. Versatile. Safe. — The Entourage carries up to 200 lbs of kids + cargo and easily converts from single, to double, to sit+stand.</div>
+                </div>
+                <div class="slide-container">
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400&h=400&fit=crop" alt="Kids on stroller">
+                    </div>
+                    <div class="slide-caption">Beautiful. Versatile. Safe. — The Entourage carries up to 200 lbs of kids + cargo and easily converts from single, to double, to sit+stand.</div>
+                </div>
+                <div class="slide-container">
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=400&fit=crop" alt="Kids on stroller">
+                    </div>
+                    <div class="slide-caption">Beautiful. Versatile. Safe. — The Entourage carries up to 200 lbs of kids + cargo and easily converts from single, to double, to sit+stand.</div>
+                </div>
+                <div class="slide-container">
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=400&fit=crop" alt="Kids on stroller">
+                    </div>
+                    <div class="slide-caption">Beautiful. Versatile. Safe. — The Entourage carries up to 200 lbs of kids + cargo and easily converts from single, to double, to sit+stand.</div>
+                </div>
+                <div class="slide-container">
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1560155989-1774e5e1c1f8?w=400&h=400&fit=crop" alt="Kids on stroller">
+                    </div>
+                    <div class="slide-caption">Beautiful. Versatile. Safe. — The Entourage carries up to 200 lbs of kids + cargo and easily converts from single, to double, to sit+stand.</div>
+                </div>
+                <div class="slide-container">
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1520155707862-5b32817388d6?w=400&h=400&fit=crop" alt="Kids on stroller">
+                    </div>
+                    <div class="slide-caption">Beautiful. Versatile. Safe. — The Entourage carries up to 200 lbs of kids + cargo and easily converts from single, to double, to sit+stand.</div>
+                </div>
+                <div class="slide-container">
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=400&h=400&fit=crop" alt="Kids on stroller">
+                    </div>
+                    <div class="slide-caption">Beautiful. Versatile. Safe. — The Entourage carries up to 200 lbs of kids + cargo and easily converts from single, to double, to sit+stand.</div>
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <div>
+                <!-- Previous buttons -->
+                <label for="slide1" class="nav-btn prev-btn prev-1">←</label>
+                <label for="slide2" class="nav-btn prev-btn prev-2">←</label>
+                <label for="slide3" class="nav-btn prev-btn prev-3">←</label>
+                <label for="slide4" class="nav-btn prev-btn prev-4">←</label>
+                <label for="slide5" class="nav-btn prev-btn prev-5">←</label>
+                <label for="slide6" class="nav-btn prev-btn prev-6">←</label>
+                <label for="slide7" class="nav-btn prev-btn prev-7">←</label>
+            </div>
+            <div>
+                <!-- Next buttons -->
+                <label for="slide1" class="nav-btn next-btn next-1">→</label>
+                <label for="slide2" class="nav-btn next-btn next-2">→</label>
+                <label for="slide3" class="nav-btn next-btn next-3">→</label>
+                <label for="slide4" class="nav-btn next-btn next-4">→</label>
+                <label for="slide5" class="nav-btn next-btn next-5">→</label>
+                <label for="slide6" class="nav-btn next-btn next-6">→</label>
+                <label for="slide7" class="nav-btn next-btn next-7">→</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+Perfect! I've repositioned the navigation buttons:
+
+Left button (←) is now on the left side of the caption
+Right button (→) is now on the right side of the caption
+Both buttons are positioned absolutely and flank the active slide's caption area
+The buttons use pointer-events to ensure they're clickable while maintaining proper positioning
+
+The navigation buttons now frame the caption text nicely, making for a more intuitive and visually balanced layout!RetryJNow explain all the latest code in simple termsI'll explain the slider code in simple terms:
+HTML Structure
+Radio Buttons (Hidden):
+html<input type="radio" name="slider" id="slide1" checked>
+
+7 hidden radio buttons (slide1 to slide7)
+They track which slide is active
+Only one can be selected at a time
+slide1 is checked by default (that's why it shows first)
+
+Slide Containers:
+html<div class="slide-container">
+    <div class="slide">
+        <img src="...">
+    </div>
+    <div class="slide-caption">Text here...</div>
+</div>
+
+Each slide has an image and a caption below it
+7 total slides with the same caption text
+
+Navigation Buttons:
+html<label for="slide2" class="nav-btn">←</label>
+
+Labels that act as buttons
+When clicked, they select the corresponding radio button
+This changes which slide is active
+
+CSS Styling
+Basic Slide Appearance:
+
+Each slide is 250px wide × 300px tall
+Inactive slides are semi-transparent (opacity: 0.5)
+All slides are arranged in a horizontal row with 20px gaps
+
+Center Mode Effect:
+csstransform: translateX(calc(50% - 135px));
+
+This formula centers the first slide
+When you click next/prev, it shifts the entire track left/right
+The active slide always ends up in the center
+
+Making Active Slide Bigger:
+css#slide1:checked ~ .slider-wrapper .slide-container:nth-child(1) {
+    transform: scale(1.2);
+}
+
+When slide1's radio is checked (:checked)
+Find the first slide container (nth-child(1))
+Scale it up to 120% size (scale(1.2))
+Make it fully visible (opacity: 1)
+Add a bigger shadow
+
+Caption Display:
+
+Captions are hidden by default (height: 0, opacity: 0)
+Only the active slide's caption becomes visible
+Smooth fade-in animation when it appears
+
+Button Positioning:
+
+Previous buttons on the left side
+Next buttons on the right side
+Positioned absolutely to flank the caption area
+Only the correct buttons for each slide are shown (others hidden)
+
+Sequential Navigation:
+
+When slide 1 is active → prev goes to slide 7, next goes to slide 2
+When slide 2 is active → prev goes to slide 1, next goes to slide 3
+And so on... creating an infinite loop
+
+How It Works Together
+
+Radio button gets checked (via clicking a navigation button)
+CSS detects which radio is :checked
+CSS applies transforms to center that slide
+CSS scales up the active slide container
+CSS shows that slide's caption
+CSS shows/hides the appropriate navigation buttons
+
+All without any JavaScript - just HTML structure and CSS selectors!
