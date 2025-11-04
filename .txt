@@ -475,3 +475,6 @@ CSS shows that slide's caption
 CSS shows/hides the appropriate navigation buttons
 
 All without any JavaScript - just HTML structure and CSS selectors!
+
+
+https://www.figma.com/design/kbMiZgaVEOhMqfQR2vLtas/Trainee-Stage-1?node-id=0-1&p=f&t=lci0ug3lwhDrceJl-0
